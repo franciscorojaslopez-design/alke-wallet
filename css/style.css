@@ -1,0 +1,106 @@
+/* ===============================
+   ESTILOS GENERALES DEL PROYECTO
+   ===============================
+   Archivo: style.css
+   Uso: Estilos visuales personalizados
+   Framework base: Bootstrap 5
+   =============================== */
+
+/* ===============================
+   RESET Y TIPOGRAFÍA BASE
+   =============================== */
+
+/* Se define la fuente principal del proyecto */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ===============================
+   NAVBAR
+   =============================== */
+
+/* Ajuste visual del logo/marca */
+.navbar-brand {
+    letter-spacing: 0.5px;
+}
+
+/* ===============================
+   TARJETAS (CARDS)
+   =============================== */
+
+/* Sombra suave personalizada para cards */
+.card {
+    border-radius: 16px;
+}
+
+/* ===============================
+   BOTONES
+   =============================== */
+
+/* Botones grandes con mejor separación */
+.btn-lg {
+    padding: 12px 16px;
+    font-weight: 600;
+}
+
+/* ===============================
+   TABLAS
+   =============================== */
+
+/* Alineación vertical centrada en tablas */
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+/* ===============================
+   MOVIMIENTOS / TRANSACCIONES
+   =============================== */
+
+/* Ícono contenedor de transacción
+   Se usa en transactions.html */
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+/* ===============================
+   FILTROS DE MOVIMIENTOS
+   =============================== */
+
+/* Botones filtro */
+.btn-filter {
+    background-color: white;
+    border: 1px solid #dee2e6;
+}
+
+/* Estado activo del filtro */
+.btn-filter.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* ===============================
+   MODALES
+   =============================== */
+
+/* Ajuste visual del contenido de los modales */
+.modal-content {
+    border-radius: 16px;
+}
+
+/* ===============================
+   UTILIDADES
+   =============================== */
+
+/* Texto más pequeño y elegante */
+.text-muted.small {
+    font-size: 0.85rem;
+}

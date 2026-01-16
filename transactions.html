@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimientos - Alke Wallet</title>
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- GOOGLE FONTS, Fuente Inter utilizada en toda la aplicación -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS PROPIO -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-light">
+    <!-- NAVBAR PRINCIPAL -->
+    <!-- Componente Bootstrap -->
+    <!-- Navegación entre vistas -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="menu.html">Alke Wallet</a>
+            <!-- Botón hamburguesa (Bootstrap JS) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menú de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deposit.html">Depositar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sendmoney.html">Enviar Dinero</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="transactions.html">Movimientos</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="login.html">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- Listado completo de movimientos -->
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <!-- Encabezado + acción -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fw-bold m-0">Últimos Movimientos</h2>
+                    <!-- Botón visual (no implementado en JS) -->
+                    <button class="btn btn-outline-primary btn-sm" id="btnExportar">Exportar PDF</button>
+                </div>
+                <!-- FILTROS DE MOVIMIENTOS -->
+                <!-- Controlados por jQuery en app.js -->
+                <div class="mb-4">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-white shadow-sm btn-filter active"
+                            data-filter="all">Todos</button>
+                        <button type="button" class="btn btn-white shadow-sm btn-filter"
+                            data-filter="ingreso">Ingresos</button>
+                        <button type="button" class="btn btn-white shadow-sm btn-filter"
+                            data-filter="egreso">Egresos</button>
+                    </div>
+                </div>
+                <!-- TABLA DE MOVIMIENTOS -->
+                <!-- Bootstrap + datos dinámicos -->
+                <!-- cargados desde app.js -->
+                <div class="card border-0 shadow-sm">
+                    <div class="table-responsive">
+                        <!-- Tabla Bootstrap -->
+                        <table class="table table-hover align-middle mb-0" id="transactionTable">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="border-0 px-4 py-3">Detalle</th>
+                                    <th class="border-0 py-3">Fecha</th>
+                                    <th class="border-0 py-3">Estado</th>
+                                    <th class="border-0 py-3 text-end px-4">Monto</th>
+                                </tr>
+                            </thead>
+                            <!-- CUERPO DE TABLA -->
+                            <!-- Es completado dinámicamente -->
+                            <!-- por jQuery desde app.js -->
+                            <tbody>
+                                <!-- Movimientos cargados dinámicamente desde app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Texto informativo -->
+                <div class="text-center mt-4">
+                    <p class="text-muted small">Mostrando los movimientos de los últimos 30 días</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- jQuery: manipulación del DOM y eventos -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS: navbar, collapse, componentes -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personalizado: funcionalidad específica -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
